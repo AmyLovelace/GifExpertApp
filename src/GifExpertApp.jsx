@@ -1,13 +1,40 @@
-export const GifExpertApp = () => {  
+import { useState } from "react";
+import {AddCategory} from '/src/components/AddCategory';
+import { GifGrid } from "./components/GifGrid";
+export const GifExpertApp = () => { 
+    //para mantener el estado se utilizan Hooks
+    const [categories, setCategories] = useState(['Rick and Morty','Fight Club','Steven Universe']);
+    
+
+    const onAddCategory = (newCategory) => {
+        
+        if(categories.includes(newCategory ) ) return;
+        setCategories([newCategory,...categories]);
+    }
+
     return(
         <>
-        {/*titulo */}
+       
             <h1>GifExpertApp</h1>
-        {/*input*/}
+     
+        <AddCategory 
+            onNewCategory={event => onAddCategory(event)}
+        />
+        {/*listado de gif */}        
+        
+       
+       
 
-        {/*listado de gif */}
-        {/*GiffItem */}
+            {
+            
+            categories.map((category) =>(
+            <GifGrid key={category} 
+            category={category}/>
+            ))
 
+            }
+            
+        
         </>
 
     )
