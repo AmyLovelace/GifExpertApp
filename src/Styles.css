@@ -1,10 +1,14 @@
 *{
     font-family: Helvetica, Arial, sans-serif;
-    background-color: rgb(234, 234, 234);
+    
   }
   
   body {
     padding: 60px;
+    background: #ef32d9; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ef32d9, #89fffd); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ef32d9, #89fffd); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   }
   
   input {
@@ -15,7 +19,7 @@
     font-size: 1.2rem;
     outline: none;
     padding: 10px 15px;
-    width: 100%;
+    width: 40%;
   }
   
   h2 {
@@ -42,7 +46,7 @@
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.03);
     display: flex;
     flex-direction: column;
-    height: 0%;  
+    height:33vh;  
     justify-content: center;
     margin-bottom: 20px;
     margin-right: 20px;
